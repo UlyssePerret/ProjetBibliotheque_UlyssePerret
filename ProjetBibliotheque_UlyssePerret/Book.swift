@@ -10,5 +10,7 @@ import FirebaseFirestoreSwift
 
 class Book: Identifiable, Codable {
     @DocumentID var id: String?
-    var name: String?
+    var titre: String?
+    var auteur: String?
+    var genre: String?
 }

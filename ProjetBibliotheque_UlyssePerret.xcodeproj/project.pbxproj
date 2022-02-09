@@ -24,7 +24,6 @@
 		7CC5645227B40B3000993092 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 7CC5645127B40B3000993092 /* FirebaseFirestoreSwift-Beta */; };
 		7CC5645427B40B3000993092 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 7CC5645327B40B3000993092 /* FirebaseInstallations */; };
 		7CC5645627B40B3000993092 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7CC5645527B40B3000993092 /* FirebaseStorage */; };
-		7CC5645827B4121000993092 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC5645727B4121000993092 /* BookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +38,6 @@
 		7CC5642F27B4033000993092 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7CC5643327B4037600993092 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		7CC5643527B4063000993092 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		7CC5645727B4121000993092 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +83,6 @@
 				7CC5643327B4037600993092 /* Book.swift */,
 				7CC5642F27B4033000993092 /* HomeView.swift */,
 				7CC5642D27B4032A00993092 /* LogOutView.swift */,
-				7CC5645727B4121000993092 /* BookView.swift */,
 				7CC5642B27B4032100993092 /* LoginView.swift */,
 				7CC5641F27B4026500993092 /* Assets.xcassets */,
 				7CC5643527B4063000993092 /* GoogleService-Info.plist */,
@@ -192,7 +189,6 @@
 				7CC5643027B4033000993092 /* HomeView.swift in Sources */,
 				7CC5642C27B4032100993092 /* LoginView.swift in Sources */,
 				7CC5641C27B4026300993092 /* ProjetBibliotheque_UlyssePerretApp.swift in Sources */,
-				7CC5645827B4121000993092 /* BookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

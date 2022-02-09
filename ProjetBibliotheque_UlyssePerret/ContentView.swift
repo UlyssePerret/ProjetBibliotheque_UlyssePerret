@@ -16,18 +16,14 @@ struct ContentView: View {
                     //Page Homme
                     HomeView()
                         .tabItem {
-                            Label("Home", systemImage: "house")
+                            Label("Home", systemImage: "book")
                         }
                     //Logout
                     LogOutView()
                         .tabItem {
                             Label("Account", systemImage: "person")
                         }
-                    //For View boos - 
-                    BookView()
-                        .tabItem {
-                            Label("Bibliotheque", systemImage: "book")
-                        }
+                   
                  
                 }
                 

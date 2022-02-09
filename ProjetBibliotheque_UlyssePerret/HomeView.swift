@@ -14,10 +14,14 @@ struct HomeView: View {
         VStack{
             if let user = model.user{
                 VStack {
-                    Text("Hello2 , \(user.uid)")
+                    Text("Bienvenue , \(user.uid)")
                     List(model.books) { book in
-                        let name = book.name ?? "No name"
-                        Text("Book : \(name)")
+                        let titre = book.titre ?? "Pas de titre"
+                        Text("Book : \(titre)");
+                        let auteur = book.auteur ?? "Pas auteur"
+                        Text("Book : \(auteur)");
+                        let genre = book.genre ?? "Pas de genre"
+                        Text("Book : \(genre)")
                     }
                 }
             } else {
