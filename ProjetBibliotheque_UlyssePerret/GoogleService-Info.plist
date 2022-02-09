@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1070388148756-ss0vj4tkjmi53nvvuekhu40ij5o5fabh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1070388148756-ss0vj4tkjmi53nvvuekhu40ij5o5fabh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCe8vK70X-1SPf2k2oYsYWE0pvfwopW8ts</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1070388148756</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>LPWAM.Tuesday</string>
+	<key>PROJECT_ID</key>
+	<string>lpdw22-7798f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lpdw22-7798f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1070388148756:ios:03816d8d405f8ecdcec501</string>
+	<key>DATABASE_URL</key>
+	<string>https://lpdw22-7798f-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>
