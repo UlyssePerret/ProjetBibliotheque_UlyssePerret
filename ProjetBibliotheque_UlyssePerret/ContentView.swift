@@ -14,10 +14,15 @@ struct ContentView: View {
             VStack{
                 //For Tab- Navigation
                 TabView {
-                    //Page Library
+                    //Page Library-Standard
                     HomeView()
                         .tabItem {
                             Label("Library", systemImage: "book")
+                        }
+                    //Book - for details
+                    BookView()
+                        .tabItem {
+                            Label("Book", systemImage: "book")
                         }
                     //Logout
                     LogOutView()

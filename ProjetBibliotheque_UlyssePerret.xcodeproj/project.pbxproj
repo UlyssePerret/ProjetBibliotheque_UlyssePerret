@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7C39866C27B52D2C00A94E4F /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39866B27B52D2C00A94E4F /* Library.swift */; };
+		7C39866E27B54D0C00A94E4F /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39866D27B54D0C00A94E4F /* BookView.swift */; };
 		7CC5641C27B4026300993092 /* ProjetBibliotheque_UlyssePerretApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC5641B27B4026300993092 /* ProjetBibliotheque_UlyssePerretApp.swift */; };
 		7CC5641E27B4026300993092 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC5641D27B4026300993092 /* ContentView.swift */; };
 		7CC5642027B4026500993092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CC5641F27B4026500993092 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		7C39866B27B52D2C00A94E4F /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		7C39866D27B54D0C00A94E4F /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		7CC5641827B4026300993092 /* ProjetBibliotheque_UlyssePerret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetBibliotheque_UlyssePerret.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC5641B27B4026300993092 /* ProjetBibliotheque_UlyssePerretApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetBibliotheque_UlyssePerretApp.swift; sourceTree = "<group>"; };
 		7CC5641D27B4026300993092 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				7CC5641B27B4026300993092 /* ProjetBibliotheque_UlyssePerretApp.swift */,
 				7CC5641D27B4026300993092 /* ContentView.swift */,
+				7C39866D27B54D0C00A94E4F /* BookView.swift */,
 				7CC5642927B4031A00993092 /* ViewModel.swift */,
 				7CC5643327B4037600993092 /* Book.swift */,
 				7C39866B27B52D2C00A94E4F /* Library.swift */,
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C39866E27B54D0C00A94E4F /* BookView.swift in Sources */,
 				7CC5643427B4037600993092 /* Book.swift in Sources */,
 				7CC5641E27B4026300993092 /* ContentView.swift in Sources */,
 				7CC5642A27B4031A00993092 /* ViewModel.swift in Sources */,
