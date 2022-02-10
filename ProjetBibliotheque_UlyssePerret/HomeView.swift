@@ -9,8 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var model: ViewModel
-    @State var showModalAdd = false
-    @State var showModalDelete = false
+    @State var showAddBook = false
+    @State var showDeleteBook = false
+    @StateObject var librarys = Library()
     
     //BOdy
     var body: some View {
@@ -26,24 +27,37 @@ struct HomeView: View {
                         let title = book.title ?? "No Title"
                         Text("Book: \(title)");
                     }
+
+                    NavigationView{
+                        List{
+                            ForEach(librarys.books, id: \.title){ book in
+                                Text(book.title ?? "No Title");
+                            }
+                        }
+                        .navigationTitle("iLibrary")
+                       
+                    }
+                    
                     Text("Function possible : ");
                   
+                   
+                    
                     //Button for additionnal
                     VStack {
                         Button("Add") {
-                            showModalAdd = true
+                            showAddBook = true
                         }
-                    }.sheet(isPresented: $showModalAdd) {
-                        ModalViewAdd(showModalAdd: $showModalAdd)
+                    }.sheet(isPresented: $showAddBook) {
+                         AddBook(showAddBook: $showAddBook)
                     }
                     
                     //Button for Delete
                     VStack {
                         Button("Delete") {
-                            showModalDelete = true
+                            showDeleteBook = true
                         }
-                    }.sheet(isPresented: $showModalDelete) {
-                        ModalViewDelete(showModalDelete: $showModalDelete)
+                    }.sheet(isPresented: $showDeleteBook) {
+                        DeleteBook (showDeleteBook: $showDeleteBook)
                     }
                 }
             } else {
@@ -66,8 +80,8 @@ struct HomeView_Previews: PreviewProvider {
     }
 }
  //For Additional
-struct ModalViewAdd: View {
-    @Binding var showModalAdd: Bool
+struct  AddBook: View {
+    @Binding var showAddBook: Bool
     
     var body: some View {
         VStack {
@@ -75,16 +89,15 @@ struct ModalViewAdd: View {
                 .padding()
                 //Form
             
-            
             Button("OK") {
-                showModalAdd = false
+                showAddBook = false
             }
         }
     }
 }
  //FOr Delete
-struct ModalViewDelete: View {
-    @Binding var showModalDelete: Bool
+struct  DeleteBook: View {
+    @Binding var showDeleteBook: Bool
     @EnvironmentObject var model: ViewModel
     var body: some View {
         VStack {
@@ -94,23 +107,15 @@ struct ModalViewDelete: View {
                 let title = book.title ?? "No Title"
                 Text("Delete: \(title) ?");
                 Button("Yes") {
-                    showModalDelete = false
+                    showDeleteBook = false
                     }
                
             }
             Button("Return") {
-                showModalDelete = false
+                 showDeleteBook = false
                 }
          }
      }
 }
-//Variables for books
-struct Books{
-    let title: String
-    let author: String
-    let gender: String
-    let language : String
-    let publication_date: String
-    
-}
+
  
