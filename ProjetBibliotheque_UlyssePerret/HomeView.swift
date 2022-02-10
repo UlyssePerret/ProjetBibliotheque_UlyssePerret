@@ -13,7 +13,7 @@ struct HomeView: View {
     @State var showDeleteBook = false
     @StateObject var library  = Library()
     
-    //BOdy
+    //Body
     var body: some View {
         VStack{
             //User
