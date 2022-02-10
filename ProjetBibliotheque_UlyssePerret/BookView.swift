@@ -31,10 +31,10 @@ struct BookView: View {
                             let author = book.author ?? "Author Anonyme"
                             Text("Author : \(author)");
                             //Gender
-                            let gender = book.gender ?? "No gender"
-                            Text("Gender : \(gender)");
+                            let genre = book.genre ?? "No gender"
+                            Text("Genre : \(genre)");
                             //Language
-                            let language = book.gender ?? "Unknow Language"
+                            let language = book.language ?? "Unknow Language"
                             Text("Language : \(language)");
                             //Publication date
                             let publication_date = book.publication_date ??  "Date unknow"
@@ -61,7 +61,3 @@ struct BookView_Previews: PreviewProvider {
         HomeView()
     }
 }
-  
- 
- 
-

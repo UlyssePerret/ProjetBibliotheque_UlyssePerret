@@ -11,7 +11,7 @@ struct HomeView: View {
     @EnvironmentObject var model: ViewModel
     @State var showAddBook = false
     @State var showDeleteBook = false
-    @StateObject var librarys = Library()
+    @StateObject var library  = Library()
     
     //BOdy
     var body: some View {
@@ -30,24 +30,24 @@ struct HomeView: View {
 
                     NavigationView{
                         List{
-                            ForEach(librarys.books, id: \.title){ book in
+                            ForEach(library.books, id: \.title){ book in
                                 Text(book.title ?? "No Title");
                             }
+                            .onDelete(perform: removeBooks)
                         }
                         .navigationTitle("iLibrary")
                         .toolbar {
                             Button {
-                                let books = Book()
-                                librarys.books.append( books)
+                                let books = Book  ( )
+                               // title = "Test Titre" , author="Test auteur", genre="Test Genre", 
+                                library.books.append( books)
                             } label: {
                                 Image(systemName: "Plus")
                             }
                         }
                     }
-                    Text("Function possible : ");
-                  
-                   
                     
+                    Text("Function possible : ");
                     //Button for additionnal
                     VStack {
                         Button("Add") {
@@ -77,6 +77,10 @@ struct HomeView: View {
             }
         }
         .padding()
+    }
+    func removeBooks(at offset: IndexSet){
+        library.books.remove(atOffsets: offset)
+        
     }
 }
  
