@@ -11,11 +11,11 @@ import Firebase
 @main
 struct ProjetBibliotheque_UlyssePerretApp: App {
     
-    
+    //Initialize Firebase
     init() {
         FirebaseApp.configure()
     }
-     
+    //Content- body
     var body: some Scene {
         WindowGroup {
             ContentView()

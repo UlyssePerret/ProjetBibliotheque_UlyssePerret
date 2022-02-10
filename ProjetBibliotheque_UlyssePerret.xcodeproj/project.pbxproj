@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C39866C27B52D2C00A94E4F /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39866B27B52D2C00A94E4F /* Library.swift */; };
 		7CC5641C27B4026300993092 /* ProjetBibliotheque_UlyssePerretApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC5641B27B4026300993092 /* ProjetBibliotheque_UlyssePerretApp.swift */; };
 		7CC5641E27B4026300993092 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC5641D27B4026300993092 /* ContentView.swift */; };
 		7CC5642027B4026500993092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CC5641F27B4026500993092 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C39866B27B52D2C00A94E4F /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		7CC5641827B4026300993092 /* ProjetBibliotheque_UlyssePerret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetBibliotheque_UlyssePerret.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC5641B27B4026300993092 /* ProjetBibliotheque_UlyssePerretApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetBibliotheque_UlyssePerretApp.swift; sourceTree = "<group>"; };
 		7CC5641D27B4026300993092 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				7CC5641D27B4026300993092 /* ContentView.swift */,
 				7CC5642927B4031A00993092 /* ViewModel.swift */,
 				7CC5643327B4037600993092 /* Book.swift */,
+				7C39866B27B52D2C00A94E4F /* Library.swift */,
 				7CC5642F27B4033000993092 /* HomeView.swift */,
 				7CC5642D27B4032A00993092 /* LogOutView.swift */,
 				7CC5642B27B4032100993092 /* LoginView.swift */,
@@ -189,6 +192,7 @@
 				7CC5643027B4033000993092 /* HomeView.swift in Sources */,
 				7CC5642C27B4032100993092 /* LoginView.swift in Sources */,
 				7CC5641C27B4026300993092 /* ProjetBibliotheque_UlyssePerretApp.swift in Sources */,
+				7C39866C27B52D2C00A94E4F /* Library.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

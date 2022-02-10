@@ -4,7 +4,7 @@
 //
 //  Created by Ulysse Perret on 08/02/2022.
 //
-
+//Import
 import Foundation
 import Combine
 import SwiftUI
@@ -13,6 +13,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 @MainActor
+//View Model
 class ViewModel: ObservableObject {
     @Published var user: User?
     @Published var errorMessage: String?
@@ -20,7 +21,7 @@ class ViewModel: ObservableObject {
     
     var listener: ListenerRegistration?
     var subscription: AnyCancellable?
-    
+    //Initial value
     init() {
         subscription = $user.sink(receiveValue:
                                     { [weak self] user in
@@ -68,19 +69,7 @@ extension ViewModel {
             } catch {
                 errorMessage = error.localizedDescription
             }
-            
-//            documents.forEach({ document in
-//                do {
-//                    let item = try document.data(as: Item.self)
-//                    errorMessage = .none
-//                    if let name = item?.name {
-//                        print("Item name: \(name)")
-//                    }
-//                } catch {
-//                    errorMessage = error.localizedDescription
-//                }
-//
-//            })
+             
         }
     }
     
@@ -92,7 +81,7 @@ extension ViewModel {
         }
 
         if let user = user {
-            let collection = Firestore.firestore().collection("FirstCollection")
+            let collection = Firestore.firestore().collection("Bibliotheque")
             listener = collection.addSnapshotListener { [weak self] (querySnapshot, error) in
                 self?.snapshotListener(querySnapshot: querySnapshot, error: error)
             }
