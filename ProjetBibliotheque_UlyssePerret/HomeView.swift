@@ -11,6 +11,7 @@ struct HomeView: View {
     @EnvironmentObject var model: ViewModel
     @State var showModalAdd = false
     @State var showModalDelete = false
+    
     //BOdy
     var body: some View {
         VStack{

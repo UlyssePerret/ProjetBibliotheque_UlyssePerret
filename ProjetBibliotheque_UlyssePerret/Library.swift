@@ -7,7 +7,7 @@
 //For the collection of book => Library
 import Foundation
 
-class Library
+class Library : ObservableObject
 {
-    
+    @Published var books = [Book]()
 }
