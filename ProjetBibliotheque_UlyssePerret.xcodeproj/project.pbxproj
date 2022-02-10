@@ -83,8 +83,8 @@
 			children = (
 				7CC5641B27B4026300993092 /* ProjetBibliotheque_UlyssePerretApp.swift */,
 				7CC5641D27B4026300993092 /* ContentView.swift */,
-				7C39866D27B54D0C00A94E4F /* BookView.swift */,
 				7CC5642927B4031A00993092 /* ViewModel.swift */,
+				7C39866D27B54D0C00A94E4F /* BookView.swift */,
 				7CC5643327B4037600993092 /* Book.swift */,
 				7C39866B27B52D2C00A94E4F /* Library.swift */,
 				7CC5642F27B4033000993092 /* HomeView.swift */,

@@ -56,7 +56,7 @@ extension ViewModel {
             errorMessage = error.localizedDescription
         }
     }
-    //Snaoshot
+    //Snapshot
     func snapshotListener(querySnapshot: QuerySnapshot?, error: Error?) {
         if let error = error {
             errorMessage = error.localizedDescription

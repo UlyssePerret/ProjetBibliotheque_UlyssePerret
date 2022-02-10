@@ -17,7 +17,7 @@ struct BookView: View {
                 //Keep user if need
                 VStack {
                     //Welcome with Id
-                    //Text("Bienvenue à toi , \(user.uid)")
+                    // Text("Bienvenue à toi , \(user.uid)")
                     Text("Welcome !")
                     //INformation for simple Book - title
                     List(model.books) { book in
