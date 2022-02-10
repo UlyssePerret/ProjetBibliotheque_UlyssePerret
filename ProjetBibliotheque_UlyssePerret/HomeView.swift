@@ -35,9 +35,15 @@ struct HomeView: View {
                             }
                         }
                         .navigationTitle("iLibrary")
-                       
+                        .toolbar {
+                            Button {
+                                let books = Book()
+                                librarys.books.append( books)
+                            } label: {
+                                Image(systemName: "Plus")
+                            }
+                        }
                     }
-                    
                     Text("Function possible : ");
                   
                    
