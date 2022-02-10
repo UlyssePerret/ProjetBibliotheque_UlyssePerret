@@ -23,6 +23,7 @@ class ViewModel: ObservableObject {
     var subscription: AnyCancellable?
     //Initial value
     init() {
+        //Subscritpion - connect
         subscription = $user.sink(receiveValue:
                                     { [weak self] user in
                                         self?.setListener(user: user)
@@ -32,9 +33,11 @@ class ViewModel: ObservableObject {
 
 // Firebase management
 extension ViewModel {
+    //COnnect
     func login(mail: String, password: String) {
         Task {
             do {
+                //Authentification
                 let authResult = try await Auth.auth().signIn(withEmail: mail, password: password)
                 errorMessage = .none
                 user = authResult.user
@@ -43,7 +46,7 @@ extension ViewModel {
             }
         }
     }
-    
+    //Disconnect
     func logout() {
         do {
             try Auth.auth().signOut()
@@ -53,7 +56,7 @@ extension ViewModel {
             errorMessage = error.localizedDescription
         }
     }
-    
+    //Snaoshot
     func snapshotListener(querySnapshot: QuerySnapshot?, error: Error?) {
         if let error = error {
             errorMessage = error.localizedDescription
@@ -72,14 +75,14 @@ extension ViewModel {
              
         }
     }
-    
+    //Listen - for check information/ user
     func setListener(user: User?) {
         if let existingListener = listener {
             existingListener.remove()
             print("Existing listener removed")
             listener = .none
         }
-
+        //check user 
         if let user = user {
             let collection = Firestore.firestore().collection("Bibliotheque")
             listener = collection.addSnapshotListener { [weak self] (querySnapshot, error) in

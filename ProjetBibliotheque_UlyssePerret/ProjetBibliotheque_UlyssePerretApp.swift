@@ -4,7 +4,7 @@
 //
 //  Created by Ulysse Perret on 09/02/2022.
 //
-
+//For project global
 import SwiftUI
 import Firebase
 

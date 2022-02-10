@@ -6,10 +6,10 @@
 //
 //For content
 import SwiftUI
-
+//Cotent
 struct ContentView: View {
      @StateObject var model = ViewModel()
-    //Body
+ 
     var body: some View {
             VStack{
                 //For Tab- Navigation

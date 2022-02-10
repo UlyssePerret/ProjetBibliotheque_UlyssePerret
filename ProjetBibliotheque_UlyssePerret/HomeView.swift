@@ -4,7 +4,7 @@
 //
 //  Created by Ulysse Perret on 08/02/2022.
 //
-
+//Page we see firt - Home
 import SwiftUI
 
 struct HomeView: View {
@@ -64,7 +64,7 @@ struct HomeView_Previews: PreviewProvider {
         HomeView()
     }
 }
- 
+ //For Additional
 struct ModalViewAdd: View {
     @Binding var showModalAdd: Bool
     
@@ -81,7 +81,7 @@ struct ModalViewAdd: View {
         }
     }
 }
- 
+ //FOr Delete
 struct ModalViewDelete: View {
     @Binding var showModalDelete: Bool
     @EnvironmentObject var model: ViewModel
@@ -103,7 +103,7 @@ struct ModalViewDelete: View {
          }
      }
 }
-
+//Variables for books
 struct Books{
     let title: String
     let author: String

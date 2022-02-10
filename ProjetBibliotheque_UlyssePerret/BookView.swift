@@ -4,7 +4,7 @@
 //
 //  Created by Ulysse Perret on 10/02/2022.
 //
-
+//Page for Details information for book
 import SwiftUI
 
 struct BookView: View {
@@ -14,11 +14,12 @@ struct BookView: View {
         VStack{
             //User
             if let user = model.user{
-               
+                //Keep user if need
                 VStack {
                     //Welcome with Id
                     //Text("Bienvenue à toi , \(user.uid)")
                     Text("Welcome !")
+                    //INformation for simple Book - title
                     List(model.books) { book in
                         let title = book.title ?? "No Title"
                         Text("Informations for Book: \(title)");
@@ -40,9 +41,6 @@ struct BookView: View {
                             Text("Date publication : \( publication_date)");
                         }
                     }
-                  
-                    
-                   
                 }
             } else {
                 LoginView()
@@ -57,7 +55,7 @@ struct BookView: View {
         .padding()
     }
 }
- 
+ //Preview
 struct BookView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
