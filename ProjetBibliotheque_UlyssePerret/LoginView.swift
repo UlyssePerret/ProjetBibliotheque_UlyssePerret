@@ -15,13 +15,16 @@ struct LoginView: View {
     
     var body: some View {
         VStack (alignment: .leading) {
+            //Email
             Text("Email")
             TextField("Email", text: $mail)
                 .autocapitalization(.none)
                 .textFieldStyle(.roundedBorder)
+            //Passsword
             Text("Password")
             SecureField("Password", text: $password)
                 .textFieldStyle(.roundedBorder)
+            //Butto,
             Button("OK", action: {
                 model.login(mail: mail, password: password)
             })
@@ -30,7 +33,7 @@ struct LoginView: View {
         .padding()
     }
 }
-
+//Preview
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()

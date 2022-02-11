@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var model: ViewModel
+  
     @State var showAddBook = false
     @State var showDeleteBook = false
     @StateObject var library  = Library()
@@ -16,9 +17,9 @@ struct HomeView: View {
     //Body
     var body: some View {
         VStack{
-            //User
+            //Cas User existe
             if let user = model.user{
-               
+               //For Welme - First view
                 VStack {
                     //Welcome with Id
                     //Text("Bienvenue à toi , \(user.uid)")
@@ -27,36 +28,18 @@ struct HomeView: View {
                         let title = book.title ?? "No Title"
                         Text("Book: \(title)");
                     }
-
-                    NavigationView{
-                        List{
-                            ForEach(library.books, id: \.title){ book in
-                                Text(book.title ?? "No Title");
-                            }
-                            .onDelete(perform: removeBooks)
-                        }
-                        .navigationTitle("iLibrary")
-                        .toolbar {
-                            Button {
-                                let books = Book  ( )
-                               // title = "Test Titre" , author="Test auteur", genre="Test Genre", 
-                                library.books.append( books)
-                            } label: {
-                                Image(systemName: "Plus")
-                            }
-                        }
-                    }
-                    
                     Text("Function possible : ");
                     //Button for additionnal
                     VStack {
                         Button("Add") {
                             showAddBook = true
                         }
+                        
                     }.sheet(isPresented: $showAddBook) {
-                         AddBook(showAddBook: $showAddBook)
+                        List(model.books) { book in
+                        AddBookView(showAddBook: $showAddBook, title: book.title, genre : book.genre, language: book.language, publication_date: book.publication_date)
                     }
-                    
+                    }
                     //Button for Delete
                     VStack {
                         Button("Delete") {
@@ -66,10 +49,11 @@ struct HomeView: View {
                         DeleteBook (showDeleteBook: $showDeleteBook)
                     }
                 }
+                //Cas User n'existe pas -> remet le login
             } else {
                 LoginView()
             }
-            
+            //MEssage Erreur
             if let errorMessage = model.errorMessage{
                 Text(errorMessage)
                     .padding()
@@ -78,34 +62,20 @@ struct HomeView: View {
         }
         .padding()
     }
+    //Tentative pour delete
     func removeBooks(at offset: IndexSet){
-        library.books.remove(atOffsets: offset)
+      //  $library.books.remove(atOffsets: offset)
         
     }
 }
- 
+ //Preview
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
     }
 }
- //For Additional
-struct  AddBook: View {
-    @Binding var showAddBook: Bool
-    
-    var body: some View {
-        VStack {
-            Text("Book who wanted to add ")
-                .padding()
-                //Form
-            
-            Button("OK") {
-                showAddBook = false
-            }
-        }
-    }
-}
- //FOr Delete
+
+ //For Delete?
 struct  DeleteBook: View {
     @Binding var showDeleteBook: Bool
     @EnvironmentObject var model: ViewModel
@@ -127,5 +97,6 @@ struct  DeleteBook: View {
          }
      }
 }
-
  
+
+

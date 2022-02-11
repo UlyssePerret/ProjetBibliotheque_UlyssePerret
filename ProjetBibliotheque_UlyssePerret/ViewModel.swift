@@ -72,7 +72,6 @@ extension ViewModel {
             } catch {
                 errorMessage = error.localizedDescription
             }
-             
         }
     }
     //Listen - for check information/ user

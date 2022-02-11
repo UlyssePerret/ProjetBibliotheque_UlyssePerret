@@ -19,7 +19,7 @@ struct LogOutView: View {
         .padding()
     }
 }
-
+//Preview
 struct LogOutView_Previews: PreviewProvider {
     static var previews: some View {
         LogOutView()

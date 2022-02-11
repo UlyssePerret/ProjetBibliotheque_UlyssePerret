@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7C39866C27B52D2C00A94E4F /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39866B27B52D2C00A94E4F /* Library.swift */; };
 		7C39866E27B54D0C00A94E4F /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39866D27B54D0C00A94E4F /* BookView.swift */; };
+		7C8E490527B66B000091B5C4 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8E490427B66B000091B5C4 /* AddBookView.swift */; };
 		7CC5641C27B4026300993092 /* ProjetBibliotheque_UlyssePerretApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC5641B27B4026300993092 /* ProjetBibliotheque_UlyssePerretApp.swift */; };
 		7CC5641E27B4026300993092 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC5641D27B4026300993092 /* ContentView.swift */; };
 		7CC5642027B4026500993092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CC5641F27B4026500993092 /* Assets.xcassets */; };
@@ -31,7 +32,8 @@
 /* Begin PBXFileReference section */
 		7C39866B27B52D2C00A94E4F /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		7C39866D27B54D0C00A94E4F /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
-		7C8E48FB27B55BA00091B5C4 /* br.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = br.md; sourceTree = "<group>"; };
+		7C8E490427B66B000091B5C4 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		7C8E490627B66E8C0091B5C4 /* brouillon.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = brouillon.md; sourceTree = "<group>"; };
 		7CC5641827B4026300993092 /* ProjetBibliotheque_UlyssePerret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetBibliotheque_UlyssePerret.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC5641B27B4026300993092 /* ProjetBibliotheque_UlyssePerretApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetBibliotheque_UlyssePerretApp.swift; sourceTree = "<group>"; };
 		7CC5641D27B4026300993092 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		7CC5640F27B4026300993092 = {
 			isa = PBXGroup;
 			children = (
+				7C8E490627B66E8C0091B5C4 /* brouillon.md */,
 				7CC5641A27B4026300993092 /* ProjetBibliotheque_UlyssePerret */,
 				7CC5641927B4026300993092 /* Products */,
 			);
@@ -85,12 +88,12 @@
 				7CC5641B27B4026300993092 /* ProjetBibliotheque_UlyssePerretApp.swift */,
 				7CC5641D27B4026300993092 /* ContentView.swift */,
 				7CC5642F27B4033000993092 /* HomeView.swift */,
+				7C8E490427B66B000091B5C4 /* AddBookView.swift */,
 				7C39866D27B54D0C00A94E4F /* BookView.swift */,
 				7CC5642D27B4032A00993092 /* LogOutView.swift */,
 				7CC5642927B4031A00993092 /* ViewModel.swift */,
 				7CC5643327B4037600993092 /* Book.swift */,
 				7C39866B27B52D2C00A94E4F /* Library.swift */,
-				7C8E48FB27B55BA00091B5C4 /* br.md */,
 				7CC5642B27B4032100993092 /* LoginView.swift */,
 				7CC5641F27B4026500993092 /* Assets.xcassets */,
 				7CC5643527B4063000993092 /* GoogleService-Info.plist */,
@@ -197,6 +200,7 @@
 				7CC5642E27B4032A00993092 /* LogOutView.swift in Sources */,
 				7CC5643027B4033000993092 /* HomeView.swift in Sources */,
 				7CC5642C27B4032100993092 /* LoginView.swift in Sources */,
+				7C8E490527B66B000091B5C4 /* AddBookView.swift in Sources */,
 				7CC5641C27B4026300993092 /* ProjetBibliotheque_UlyssePerretApp.swift in Sources */,
 				7C39866C27B52D2C00A94E4F /* Library.swift in Sources */,
 			);
