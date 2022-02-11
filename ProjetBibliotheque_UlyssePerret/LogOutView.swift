@@ -12,14 +12,18 @@ struct LogOutView: View {
     @EnvironmentObject var model: ViewModel
     var body: some View {
         VStack{
-            Button("Log out", action: {
+            Button( action: {
                 model.logout()
-            })
+            }, label: {
+                            Text("Log out")
+                    .fontWeight(.bold)
+            }).padding()
+            
         }
         .padding()
     }
 }
-//Preview
+
 struct LogOutView_Previews: PreviewProvider {
     static var previews: some View {
         LogOutView()

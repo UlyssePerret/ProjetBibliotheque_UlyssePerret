@@ -24,11 +24,13 @@ struct LoginView: View {
             Text("Password")
             SecureField("Password", text: $password)
                 .textFieldStyle(.roundedBorder)
-            //Butto,
-            Button("OK", action: {
+            //Button
+            Button( action: {
                 model.login(mail: mail, password: password)
-            })
-            .padding()
+            }, label: {  Text("Log in")
+                    .fontWeight(.bold)
+            }).padding()
+             
         }
         .padding()
     }

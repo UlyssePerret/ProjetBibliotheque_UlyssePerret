@@ -13,9 +13,10 @@ struct HomeView: View {
     @State var showAddBook = false
     @State var showDeleteBook = false
     @StateObject var library  = Library()
-    
+ 
     //Body
     var body: some View {
+    
         VStack{
             //Cas User existe
             if let user = model.user{
@@ -36,9 +37,7 @@ struct HomeView: View {
                         }
                         
                     }.sheet(isPresented: $showAddBook) {
-                        List(model.books) { book in
-                        AddBookView(showAddBook: $showAddBook, title: book.title, genre : book.genre, language: book.language, publication_date: book.publication_date)
-                    }
+                              AddBookView(showAddBook: $showAddBook ) 
                     }
                     //Button for Delete
                     VStack {
@@ -68,12 +67,20 @@ struct HomeView: View {
         
     }
 }
- //Preview
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
+func add() {
+      //book.append("Test ajout")
+  }
+
+var addButton: some View {
+        Button("Add", action: {
+            add()
+            
+        })
     }
-}
+
+func delete(indexSet: IndexSet) {
+     //books.remove(atOffsets: indexSet)
+   }
 
  //For Delete?
 struct  DeleteBook: View {
@@ -97,6 +104,9 @@ struct  DeleteBook: View {
          }
      }
 }
- 
-
-
+//Preview
+struct HomeView_Previews: PreviewProvider {
+   static var previews: some View {
+       HomeView()
+   }
+}
